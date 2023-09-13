@@ -48,6 +48,29 @@ const RestaurantCard =(props)=>{
     )
 }
 
+const resObj = {
+
+        {
+        "info": {
+        "id": "428",
+        "name": "Biryani Pot",
+        "cloudinaryImageId": "mdipoyzfzsa7n7igskht",
+        "locality": "Maruti Nagar",
+        "areaName": "Btm Layout",
+        "costForTwo": "₹500 for two",
+        "cuisines": [
+        "North Indian",
+        "Biryani"
+        ],
+        "avgRating": 3.9,
+        "restaurantId": "428",
+        "avgRatingString": "3.9",
+        "totalRatingsString": "10K+",
+        "deliveryTime": 41, 
+        }
+    }     
+}
+
 const Body=()=>{
     return (
         <div className="body">
