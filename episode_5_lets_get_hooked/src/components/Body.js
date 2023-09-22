@@ -1,49 +1,19 @@
 import RestaurantCard from "./RestaurantCard";
-//import resList from "../utilis/mockData";
+import { useState } from "react";
+import resList from "../utilis/mockData";
 
 const Body=  ()=> {
-    let listOfRestaurants = [{
-        "info":{
-            "num":"1",
-    "id": "428",
-    "name": "Biryani",
-    "cloudinaryImageId": "mdipoyzfzsa7n7igskht",
-    "costForTwo": "₹500 for two",
-    "cuisines": [
-    "North Indian", 
-    "Biryani"
-    ],
-    "avgRating": 3.0,
-        }
-    },
-   {
-        "info":{
-            "num":"2",
-    "id": "427",
-    "name": "Biryani Pot",
-    "cloudinaryImageId": "mdipoyzfzsa7n7igskht",
-    "costForTwo": "₹500 for two",
-    "cuisines": [
-    "North Indian",
-    "Biryani"
-    ],
-    "avgRating": 4.7,
-        }
-    }
-    ];
-  
+   // const [listOfRestaurants,setListOfRestaurant]=useState(resList);
+   const arr =useState(resList)
+   //const [listOfRestaurants,setListOfRestaurant]=arr;
+   const listOfRestaurants=arr[0];
+   const setListOfRestaurant=arr[1];
     return (
         <div className="body">
-            {/* <div className="filter">
-                <button className="filter-btn" onClick={()=>{
-                    resList = resList.filter((res)=>res.info.avgRating > 4.5);
-                    console.log(resList); 
-                }}>Top rated Restaurants</button>
-            </div> */}
             <div className="filter">
                 <button className="filter-btn" onClick={() => {
-                    listOfRestaurants = listOfRestaurants.filter((res)=> res.info.avgRating > 4.5);
-                    console.log(listOfRestaurants); 
+                    const filteredList = listOfRestaurants.filter((res)=> res.info.avgRating > 4.0);
+                    setListOfRestaurant(filteredList)
                 }}>Top rated Restaurants</button>
             </div>
             <div className="res-container">
