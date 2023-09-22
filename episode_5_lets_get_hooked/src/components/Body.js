@@ -1,13 +1,10 @@
 import RestaurantCard from "./RestaurantCard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import resList from "../utilis/mockData";
 
 const Body=  ()=> {
-   // const [listOfRestaurants,setListOfRestaurant]=useState(resList);
-   const arr =useState(resList)
-   //const [listOfRestaurants,setListOfRestaurant]=arr;
-   const listOfRestaurants=arr[0];
-   const setListOfRestaurant=arr[1];
+   const [listOfRestaurants,setListOfRestaurant]=useState(resList);
+
     return (
         <div className="body">
             <div className="filter">
