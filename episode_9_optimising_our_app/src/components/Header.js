@@ -3,6 +3,7 @@ import  {LOGO_URL}  from "../utilis/constant";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utilis/useOnlineStatus";
 
+
 const Header = () =>{
     const [btnNameReact,setBtnNameReact]=useState("Login");
 
@@ -24,6 +25,9 @@ const Header = () =>{
                     </li>
                     <li>
                         <Link to="/contact">contact us</Link>
+                    </li>
+                    <li>
+                        <Link to="/grocery">Grocery</Link>
                     </li>
                     <li>
                         <Link to="/about">About</Link>
