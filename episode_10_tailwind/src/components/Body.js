@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utilis/useOnlineStatus";
-// hello
+
 
 const Body=  ()=> {
  const [listOfRestaurants,setListOfRestaurant]=useState([]);
